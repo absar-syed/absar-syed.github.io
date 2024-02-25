@@ -1,28 +1,43 @@
+<!--Absar Syed 100706764-->
+<!--Zaid Ali-->
+<!--2/24/2024-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 
-    <!--  CSS Selection  -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="content/app.css">
+    <!--  Links  -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/style.css">
 </head>
 <body>
 
+    <!-- nav bar -->
     <header></header>
 
-    <div class="container">
-        <main>
-            <!--   mb is margin bottom     -->
-            <h1 class="mb-5">Welcome to our Web Site</h1> <!-- class is from javascript -->
-            <button id="AboutUsBtn" class="btn btn-primary">About Us</button>
-        </main>
-    </div>
+    <!--   Video Background    -->
+    <video  class="position-fixed" autoplay loop muted id="backgroundVideo">
+        <source src="./content/media/bgVideo.mp4" type="video/mp4">
+    </video>
 
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="scripts/app.js"></script>
+    <!-- Content   MAKE RESPONSIVE-->
+        <div class="container centered text-center text-white">
+            <h1 class="mb-3 font-weight-bold">Harmony Hub</h1>
+            <a>The Harmony Hub is a vibrant, community center that aims to offer a range of services and activities to
+                people of all ages and backgrounds. It's a place where technology meets community service, providing
+                resources like classes, events, workshops, and community projects</a>
+        </div>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!--  includes  -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/main.js"></script>
+
 </body>
 </html>

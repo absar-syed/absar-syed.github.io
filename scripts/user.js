@@ -3,21 +3,21 @@
 (function (core) {
     class User {
 
-        constructor(displayName = "", emailAddress = "", username = "", password = "") {
+        constructor(fullName = "", emailAddress = "", username = "", password = "") {
 
             this._emailAddress = emailAddress;
-            this._displayName = displayName;
+            this._fullName = fullName;
             this._username = username;
-            this.password = password;
+            this._password = password;
 
         }
 
-        get displayName() {
-            return this._displayName;
+        get fullName() {
+            return this._fullName;
         }
 
-        set displayName(value) {
-            this._displayName = value;
+        set fullName(value) {
+            this._fullName = value;
         }
 
         get emailAddress() {
@@ -45,8 +45,8 @@
         }
 
         toString() {
-            return `DisplayName ${this._displayName}  
-                \nEmailAddress: ${this.emailAddress}\n Username ${this._username}`
+            return `FullName ${this._fullName}  
+                \nEmailAddress: ${this._emailAddress}\n Username ${this._username}`
         }
 
         /**
@@ -54,8 +54,8 @@
          * @returns {null|string}
          */
         serialize() {
-            if (this._displayName !== "" && this._emailAddress !== "" && this._username !== "") {
-                return `${this._displayName}, ${this._emailAddress}, ${this._username}`;
+            if (this._fullName !== "" && this._emailAddress !== "" && this._username !== "") {
+                return `${this._fullName}, ${this._emailAddress}, ${this._username}`;
             }
             console.error("One or more properties of the Contact are empty or invalid")
             return null;
@@ -68,24 +68,33 @@
          */
         deserialize(data) {
             let propertyArray = data.split(",");
-            this._displayName = propertyArray[0];
+            this._fullName = propertyArray[0];
             this._emailAddress = propertyArray[1];
             this._username = propertyArray[2]
         }
 
         toJSON(){
+
+            // const user = {
+            //     FullName : this._fullName,
+            //     EmailAddress : this._emailAddress,
+            //     Username : this._username,
+            //     Password : this._password
+            // }
+
+
             return {
-                DisplayName : this._displayName,
+                FullName : this._fullName,
                 EmailAddress : this._emailAddress,
                 Username : this._username,
-                Password : this.Password
+                Password : this._password
             }
         }
 
         fromJSON(data){
 
-            this._displayName = data.displayName;
-            this._emailAddress = data.emailAddress;
+            this._fullName = data.FullName;
+            this._emailAddress = data.EmailAddress;
             this._username = data.Username;
             this._password = data.Password;
 

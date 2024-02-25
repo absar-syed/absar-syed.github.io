@@ -1,0 +1,84 @@
+<!--Absar Syed 100706764-->
+<!--Zaid Ali-->
+<!--2/24/2024-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+
+    <!--  Links  -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/style.css">
+    <script src="./scripts/contact.js"></script>
+
+</head>
+<body>
+
+    <!--  NavBar -->
+    <header></header>
+
+    <div class="container">
+        <h1 class="mt-3 mb-5" >Contact Us</h1>
+        <div class="row justify-content-lg-center g-3" ></div>
+        <p id="messageArea"></p>
+        <form>
+            <div class="input-group-mb-3">
+                <span class="input-group-text">Full Name</span>
+                <input id= "fullName" name= "fullName" type="text" class="form-control"  aria-describedby="Full Name Input" aria-label="Full Name" required>
+
+            </div>
+
+            <div class="input-group-mb-3">
+                <span class="input-group-text">Contact Number</span>
+                <input id= "contactNumber" name= "contactNumber" type="tel" class="form-control"  aria-describedby="Contact Number Input" aria-label="Contact Number" required>
+
+            </div>
+
+
+            <div class="input-group-mb-3">
+                <span class="input-group-text">Email Address</span>
+                <input id= "emailAddress" name= "emailAddress" type="email" class="form-control"  aria-describedby="Email Address Input" aria-label="Email Address" required>
+
+            </div>
+
+            <div class="input-group-mb-3">
+                <span class="input-group-text">Your Message/Feedback</span>
+                <textarea id= "message" name= "message"  class="form-control" aria-label="Message Area"></textarea>
+
+            </div>
+
+            <div class="m-2">
+
+                <input id= "subscribeCheckbox" name= "subscribeCheckbox" type="checkBox" class="form-check-input">
+                <label class= "form-check-label" for="subscribeCheckbox"> Subscribe to our contact list</label>
+            </div>
+
+
+            <button onclick="setTimeout(myfun, 5000);" id="sendButton" type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> Submit</button>
+
+            <button id= "cancelButton" type="reset" class="btn btn-warning"><i class="fa fa-undo" aria-hidden="true"></i>
+                Cancel</button>
+        </form>
+
+        <div class="col-4 col-md-4">
+            <a href="submissions.html" class="btn btn-primary btn-lg mt-1"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                Show Submissions</a>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer></footer>
+
+
+    <!--  includes  -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/namespace.js"></script>
+    <script src="./scripts/contact.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
